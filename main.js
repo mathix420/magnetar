@@ -6,7 +6,6 @@ ws.onmessage = (message) => {
     j.forEach(([ key, value ]) => {
         if ( key.startsWith('v') ) {
             const elem = document.querySelector(`*[${key}]`)
-            console.log(elem, elem.attributes[key].value)
             elem.removeAttribute('empty')
             elem[elem.attributes[key].value] = value
         } else {
