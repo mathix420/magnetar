@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Just a websocker framework POC.">
-    <title>P.O.C.</title>
+    <title>WSIX POC</title>
     <link rel="stylesheet" href="/css/skeletons.css">
     <script src="/main.js"></script>
     <script async src="/actions.js"></script>
@@ -17,15 +17,23 @@
 <body>
     <div class="section">
         <div class="container">
-            <h1 class="title">This is just a simple test</h1>
+            <h1 class="title is-1">This is just a simple test</h1>
             <res r1 empty></res>
             <res r2 empty></res>
         </div>
     </div>
     <div class="section container">
         <div class="columns" style="max-width: 800px;">
-            <button class="column py-0 mr-2 button is-success has-text-black is-3" onclick="btnClick()">Request a name</button>
+            <button class="column py-0 mr-2 mb-2 button is-success has-text-black is-3" onclick="nameRequest()">Request a name</button>
             <input class="column input" aria-label="test" vres1="value" placeholder="Text input">
+        </div>
+    </div>
+    <div class="section container">
+        <div class="columns is-centered" style="max-width: 800px;">
+            <button class="column py-0 mr-2 mb-2 button is-info has-text-black is-3" onclick="picRequest()">Request a pic</button>
+            <div class="column is-9 px-0 py-0">
+                <res res3 empty="fill" class="image is-4by3"></res>
+            </div>
         </div>
     </div>
 </body>

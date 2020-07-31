@@ -6,3 +6,9 @@ res[empty] {
     width: 20%;
     margin: 5px 0;
 }
+
+res[empty="fill"] {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}

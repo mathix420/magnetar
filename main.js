@@ -1,4 +1,4 @@
-const ws = new WebSocket('wss://magnetar.cloudno.de')
+const ws = new WebSocket('ws://localhost:8080')
 
 ws.onmessage = (message) => {
     console.info(message)
