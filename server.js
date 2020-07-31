@@ -12,7 +12,7 @@ wss.on('connection', function connection(ws) {
             }))
         } else if ( message == 'getPic' ) {
             ws.send(JSON.stringify({
-                res3: `<img src="${faker.image.cats()}" />`
+                res3: `<img src="https://source.unsplash.com/random/640x480" />`
             }))
         }
     });
