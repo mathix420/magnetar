@@ -8,11 +8,13 @@ wss.on('connection', function connection(ws) {
         console.log('received: %s', message);
         if ( message == 'getName' ) {
             ws.send(JSON.stringify({
-                vres1: faker.name.findName()
+                vres1: faker.name.findName(),
+                r2: `<h3>${new Date()}</h3>`
             }))
         } else if ( message == 'getPic' ) {
             ws.send(JSON.stringify({
-                res3: `<img src="https://picsum.photos/640/480" />`
+                res3: `<img src="https://picsum.photos/640/480" />`,
+                r2: `<h3>${new Date()}</h3>`
             }))
         }
     });
@@ -29,5 +31,6 @@ wss.on('connection', function connection(ws) {
 function sendUpdate(ws) {
     ws.send(JSON.stringify({
         r1: '<h2 class="has-text-danger">This title has been updated dynamically from server</h2>',
+        r2: `<h3>${new Date()}</h3>`
     }));
 }
