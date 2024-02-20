@@ -2,6 +2,7 @@ res[empty] {
     display: block;
     border-radius: 10px;
     background-color: hsl(0, 0%, 92%);
+    animation: skeleton-loading 1s linear infinite alternate;
     height: 1rem;
     width: 20%;
     margin: 5px 0;
@@ -11,4 +12,13 @@ res[empty="fill"] {
     height: 100%;
     width: 100%;
     margin: 0;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(0, 0%, 92%);
+    }
+    100% {
+        background-color: hsl(0, 0%, 72%);
+    }
 }
